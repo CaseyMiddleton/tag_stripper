@@ -36,6 +36,10 @@ The syntax to run this script from the command line is as follows:
 ``` 
 $ python command_stripper.py <path to input file> <path to output file> <command to remove>
 ```
+The command to be removed should only contain the command name, with no `\` or `{}`. For example, to remove the command `\to_remove{...}` from the file `fixme.tex`, one would run
+``` 
+$ python command_stripper.py fixme.tex fixed.tex to_remove
+```
 If no output filename is provided, output will be stored in `inputfile_no_command`.
 
 ### From python 
